@@ -8,19 +8,18 @@ import { useRouter } from "next/navigation";
 
 const CreatePost = ({ onClose, refresh }) => {
   const router = useRouter();
-  const handleSubmit = (e) =>{
+  const handleSubmit = (e) => {
     e.preventDefault();
     const myFormData = new FormData(e.target);
-    postPost(myFormData)
-    refresh()
-  }
-  
+    postPost(myFormData);
+    refresh();
+  };
 
   useEffect(() => {
     onClose();
     refresh();
     router.refresh();
-  }, [router]);
+  }, [onClose, refresh, router]);
 
   return (
     <div className="text-black">
