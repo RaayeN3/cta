@@ -2,25 +2,17 @@
 import { postPost } from "@/lib/action";
 import BlurBackground from "../blurBackground/BlurBackground";
 import { useFormState } from "react-dom";
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-const CreatePost = ({ onClose, refresh }) => {
+const CreatePost = ({ refresh }) => {
   const router = useRouter();
-  const handleSubmit = (e) =>{
+  const handleSubmit = (e) => {
     e.preventDefault();
     const myFormData = new FormData(e.target);
-    postPost(myFormData)
+    postPost(myFormData);
     refresh()
-  }
-  
-
-  useEffect(() => {
-    onClose();
-    refresh();
-    router.refresh();
-  }, [router]);
+  };
 
   return (
     <div className="text-black">

@@ -54,7 +54,7 @@ const postSchema = new mongoose.Schema(
 );
 
 // Check if the Post model is already defined
-export const Post = mongoose.models.Post || mongoose.model("Post", postSchema);
+export const Post = mongoose.models?.Post || mongoose.model("Post", postSchema);
 
 // Check if the User model is already defined
-export const User = mongoose.models.User || mongoose.model("User", userSchema);
+export const User = mongoose.models?.User || mongoose.model("User", userSchema);

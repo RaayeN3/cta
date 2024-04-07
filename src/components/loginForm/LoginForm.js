@@ -35,13 +35,13 @@ const LoginForm = () => {
           Login
         </button>
         <Link href={"/register"}>
-          Don't have account? register <b>here</b>
+          Don&apos;t have account? register <b>here</b>
         </Link>
       </form>
       <hr className=" border-gray-500 w-4/5 m-auto" />
       <form action={handleGoogleLogin} className="flex flex-col items-center">
         <button className="bg-white text-black p-3 rounded-2xl justify-center flex items-center gap-2 font-semibold">
-          Login with Google <Image src={"/google.png"} width={20} height={20} />
+          Login with Google <Image src={"/google.png"} width={20} height={20} alt="google login" />
         </button>
       </form>
     </div>

@@ -2,10 +2,10 @@
 import BlurBackground from "@/components/blurBackground/BlurBackground";
 import { useState } from "react";
 import CreatePost from "../createPost/CreatePost";
-import { useRouter } from "next/navigation";
+
 
 const AddButton = ({ refresh }) => {
-  const router = useRouter();
+  
   const [show, setShow] = useState(false);
   const handleClick = () => {
     setShow(true);
@@ -16,7 +16,7 @@ const AddButton = ({ refresh }) => {
   return (
     <div className="flex items-center justify-center ">
       <BlurBackground show={show} onClose={onClose}>
-        <CreatePost onClose={onClose} refresh={refresh} />
+        <CreatePost refresh={refresh}/>
       </BlurBackground>
       <button
         onClick={handleClick}

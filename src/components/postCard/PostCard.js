@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { deletePost } from "@/lib/action";
 
-const PostCard = ({ post, index, userId, refresh }) => {
+const PostCard = ({ post, index, userId,refresh }) => {
   return (
     <div className="flex flex-col gap-4 " key={index}>
       <div className="bg-slate-700  rounded-2xl  p-5">
