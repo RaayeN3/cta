@@ -41,6 +41,7 @@ const LoginForm = () => {
       <hr className=" border-gray-500 w-4/5 m-auto" />
       <form action={handleGoogleLogin} className="flex flex-col items-center">
         <button className="bg-white text-black p-3 rounded-2xl justify-center flex items-center gap-2 font-semibold">
+<<<<<<< HEAD
           Login with Google{" "}
           <Image
             src={"/google.png"}
@@ -48,6 +49,9 @@ const LoginForm = () => {
             height={20}
             alt="google login"
           />
+=======
+          Login with Google <Image src={"/google.png"} width={20} height={20} alt="google login" />
+>>>>>>> 59c6d10a962fe9055df909adbc58fdadfcc911c3
         </button>
       </form>
     </div>
